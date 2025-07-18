@@ -1,10 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const menuList = document.querySelector('.menu ul');
+  const menuToggle = document.createElement('div');
+  menuToggle.className = 'menu-toggle';
+  menuToggle.innerHTML = '☰';
+  menuToggle.style.display = 'none';
   
-  if (menuToggle && menuList) {
+  const menu = document.querySelector('.menu');
+  if (menu) {
+    menu.insertBefore(menuToggle, menu.firstChild);
+    
     menuToggle.addEventListener('click', function() {
-      menuList.classList.toggle('active');
+      const ul = menu.querySelector('ul');
+      if (ul) ul.classList.toggle('active');
     });
   }
 });

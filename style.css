@@ -737,3 +737,144 @@ footer {
       grid-row: 2;
     }
   }
+  @media (max-width: 992px) {
+  /* Ajustes para tablets */
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .projetos-container, .portfolio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .galeria img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajustes para tablets pequenos e celulares grandes */
+  body {
+    padding-top: 60px;
+  }
+  
+  header {
+    padding: 3rem 1.5rem;
+  }
+  
+  header h1 {
+    font-size: 2.2rem;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+  }
+  
+  section {
+    padding: 1.8rem;
+    margin: 1.5rem auto;
+    width: 95%;
+  }
+  
+  .menu ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .menu a {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  
+  .projetos-container, .portfolio-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .galeria {
+    justify-content: center;
+  }
+  
+  .galeria img {
+    width: 130px;
+  }
+  
+  .cursos-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .certificados-box, .onu-box {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Ajustes para celulares */
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  header p {
+    font-size: 1rem;
+  }
+  
+  section {
+    padding: 1.5rem 1.2rem;
+    border-radius: 10px;
+  }
+  
+  section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .menu {
+    padding: 0.5rem;
+  }
+  
+  .menu ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    display: none;
+  }
+  
+  .menu ul.active {
+    display: flex;
+  }
+  
+  .menu-toggle {
+    display: block;
+    text-align: right;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .projetos-container, .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .galeria {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  
+  .galeria img {
+    width: 100%;
+    max-width: 150px;
+  }
+  
+  .projeto-links, .artigo-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .download-btn, .open-btn, .github-link, .demo-link {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .portfolio-thumbnail {
+    height: 150px;
+  }
+}
